@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask Out Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <h1>Hey <span id="crushName">Pihu.....</span>,</h1>
+    <p>I've been waiting to tell you something...</p>
+    <p>Please click on yes</p>
+    <div class="button-container">
+      <button class="btn yes" onclick="reply('yes')">Yes</button>
+      <button class="btn no" onclick="reply('no')">No</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function reply(response) {
+    document.getElementById("crushName").innerHTML = response === 'yes' ? '😊' : '😔';
+    document.querySelector(".button-container").innerHTML = response === 'yes' ? '<p>I am in love with you! 😊</p>' : '<p>okay😔</p>';
+  }
+</script>
+</body>
+</html>
